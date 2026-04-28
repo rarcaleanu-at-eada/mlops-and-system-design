@@ -1,1 +1,1 @@
-print("hello world eada")
+print("hello world Class")
