@@ -6,10 +6,12 @@ from metadata import MODEL_NAME
 
 
 def main():
-    df = load_data(file_name="bank-full_train_test.csv")
+    df = load_data(
+        file_name="bank-full_train_test.csv"
+        )
     df = balance_dataset(df)
     df = Transformer().transform(df)
-    lr_model = train_model(df=df, target_column="y")
+    lr_model = train_model(df=df,        target_column="y")
     store_model(model=lr_model, model_name=MODEL_NAME)
 
 
